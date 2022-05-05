@@ -15,8 +15,15 @@ int main(int argc, char const *argv[])
     //p is the number of layers or depth of the matrix
     int n,m,p;
     //take sizes n,m and p from user
-    cout << "Enter n,m,p: ";
+    cout << "Enter 3 intigers: n  m  p: ";
     cin >> n >> m >> p;
+
+    //validate input
+    if(n<=0 || m<=0 || p<=0)
+    {
+        cout << "Invalid input" << endl;
+        return 0;
+    }
 
     //create a vesctor matrix of size n*m*p and fill it with random numbers
     vector<vector<vector<int>>> matrix(n,vector<vector<int>>(m,vector<int>(p)));
@@ -71,7 +78,8 @@ int main(int argc, char const *argv[])
         }
     }
     cout << "Matrix Test : " << endl;
-   for(int k=0;k<p;k++)
+    //print the test matrix
+    for(int k=0;k<p;k++)
     {
         for(int i=0;i<n;i++)
         {
@@ -100,7 +108,11 @@ int main(int argc, char const *argv[])
         }
     }
     cout << "Matrix test passed" << endl;
-
+    cout << "press any key to exit" << endl;
+    //empty the input buffer
+    cin.ignore();
+    //pause the program
+    cin.get();
     return 0;
 }
 
