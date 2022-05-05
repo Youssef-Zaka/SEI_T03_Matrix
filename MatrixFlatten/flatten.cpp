@@ -22,7 +22,12 @@ int main(int argc, char const *argv[])
     if(n<=0 || m<=0 || p<=0)
     {
         cout << "Invalid input" << endl;
-        return 0;
+         cout << "press any key to exit" << endl;
+        //empty the input buffer
+        cin.ignore();
+        //pause the program
+        cin.get();
+        return 0;   
     }
 
     //create a vesctor matrix of size n*m*p and fill it with random numbers
