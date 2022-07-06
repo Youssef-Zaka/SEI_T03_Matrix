@@ -1,4 +1,5 @@
-# SEI_T03_Matrix
+# Simple Matrix Flatten
+
 Matrix Flatten Task, developed in C++, includes an executable with which you can try the code. This was developed as a Task for an internship.
 
 ## How To Use
